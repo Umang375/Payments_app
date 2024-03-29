@@ -39,7 +39,7 @@ export const authOptions = {
                         password: hashedPassword
                     }
                 });
-            
+                //maybe send a otp to the users phone number
                 return {
                     id: user.id.toString(),
                     name: user.name,
