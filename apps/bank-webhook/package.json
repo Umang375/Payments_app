@@ -4,28 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js",
     "start": "node dist/index.js",
     "dev": "npm run build && npm run start"
->>>>>>> migration
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "@repo/db" : "*",
-    "@types/express": "^4.17.21",
-    "esbuild": "^0.20.2",
-    "express": "^4.19.2"
-=======
     "@repo/db": "*",
     "@types/express": "^4.17.21",
     "esbuild": "^0.20.2",
     "express": "^4.19.1"
->>>>>>> migration
   }
 }
