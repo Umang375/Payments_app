@@ -1,9 +1,13 @@
 import express  from "express";
 import{ userRouter} from "./router/user";
+import { merchantRouter } from "./router/merchant";
 
 const app = express();
 
-app.get('/api/v1/', userRouter);
+app.use(express.json());
+
+app.use('/api/v1/user', userRouter);
+app.use('/api/v1/merchant', merchantRouter);
 
 
 app.listen(3000, () => {

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import {PrismaClient} from '@prisma/client';
 import jwt from 'jsonwebtoken';
-import { JWT_PASS } from "../config";
+import { JWT_MERCHANT_PASS } from "../config";
 
 export const merchantRouter = Router();
 const prismaClient = new PrismaClient(); // ideally should create the singleton instance of the prisma client refer other projects
@@ -33,7 +33,7 @@ merchantRouter.post('/signin', async(req, res) => {
     if(!merchant){
         res.status(403).json({message: "Invalid username or password"});
     }
-    const token = jwt.sign({merchantId: merchant.id}, JWT_PASS);
+    const token = jwt.sign({id: merchant.id}, JWT_MERCHANT_PASS);
 
     res.json({token});
   });

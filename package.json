@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "@types/jsonwebtoken": "^9.0.7",
+    "corsa": "^1.0.2",
     "jsonwebtoken": "^9.0.2"
   }
 }
